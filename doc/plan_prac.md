@@ -1,7 +1,7 @@
 # Plan prac:
 1) **Specyfikacja wymagań i planu prac** (do 07.04.2021r.)
     * Konsultacja z klientem
-    * ***Efekt: wymagania i plan prac dostępne na Github***
+    * ***Efekt: [wymagania](wymagania.md) i plan prac dostępne na Github***
 2) **Analiza systemu** (do 21.04.2021r.)
     * Analiza poprzednio zdefiniowanych wymagań
     * Zaznajomienie się z oprogramowaniem Redmine i podobnymi pluginami
