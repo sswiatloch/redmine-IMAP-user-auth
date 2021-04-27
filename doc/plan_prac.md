@@ -9,7 +9,7 @@
     * Zdefiniowanie zadań do zrealizowania i podział ich między członkami zespołu
     * Utworzenie tablicy kanban prezentującej stan prac
     * Konsultacja z klientem
-    * ***Efekt: tablica kanban zawierająca zadania, milestony i aktualny stan prac dostępna na Github***
+    * ***Efekt: [tablica kanban](https://github.com/sswiatloch/redmine-IMAP-user-auth/projects/1) zawierająca [zadania](https://github.com/sswiatloch/redmine-IMAP-user-auth/issues), [milestony](https://github.com/sswiatloch/redmine-IMAP-user-auth/milestones) i aktualny stan prac dostępna na Github***
 3) **Projekt systemu** (do 05.05.2021r.)
     * Zapisanie dokumentacji w jednym pliku: 
       * wymagania
