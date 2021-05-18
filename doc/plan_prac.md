@@ -19,6 +19,6 @@
       * analiza ryzyk
       * diagramy UML
       * wykorzystywane narzędzia
-    * ***Efekt: [całość dokumentacji](dokumentacja.pdf) dostępna w pliku PDF na Github***
-4) **Implementacja** (do 26.05.2021r.)
+    * ***Efekt: [całość dokumentacji](dokumentacja.pdf) dostępna w pliku PDF na Github (nieaktualizowana) + [Markdown](dokumentacja.md) (aktualizowana)***
+4) **Implementacja** <s>(do 26.05.2021r.)</s> (do 16.06.2021r.)
     * ***Efekt: działający plugin dostępny na Github***
