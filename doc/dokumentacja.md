@@ -66,4 +66,13 @@ Od teraz sposób uwierzytelniania każdego użytkownika może zostać zmieniony 
 
 ## Analiza ryzyk
 
+- Niedotrzymanie terminu - w wyniku niedoszacowania złożoności problemu lub zdarzeń losowych mogą wystąpić opóźnienia. Aby nie przekroczyć terminu 16 czerwca 2021, termin oddania implementacji w [Planie prac](https://github.com/sswiatloch/redmine-IMAP-user-auth/blob/main/doc/plan_prac.md) został ustanowiony na 26 maja 2021, co daje 3 tygodniowy bufor na ewentualne opóźnienia. Prawdopodobieństwo: średnie; konsekwencje: poważne.
+- Brak możliwości implementacji funkcjonalności - możliwe jest, że niektórych funkcjonalności nie można zaimplementować w systemie Redmine. Ryzyko to jest znikome, ponieważ analiza problemu i systemu wykazała, że poszczególne funkcjonalności już istnieją i działają w tym środowisku. Prawdopodbieństwo: niewielkie; konsekwencje: poważne.
+- Słabe bezpieczeństwo - zapewnienie odpowiedniego poziomu bezpieczeństwa jest bardzo ważne, aby poprawnie przeprowadzać autentyfikacje użytkowników i zapobiec nieupoważnionemu dostępowi. Projekt modułu autentyfikacji jest na podstawie oficjalnego [HowTo](https://www.redmine.org/projects/redmine/wiki/Alternativecustom_authentication_HowTo), dlatego bezpieczeństwo powinno być zagwarantowane przez ogólną architekturę systemu. Inne kwestie bezpieczeństwa, jak zewnętrzna biblioteka Net::IMAP lub odpiednia konfiguracja, nie zależą od autorów projektu. Prawdopodobieństwo: niewielkie; konsekwencje: poważne.
+
 ## Wykorzystane narzędzia
+- **GitHub** - repozytorium kodu oraz zarządzanie projektem (tablica kanban)
+- **WEBrick server** - serwer HTTP do testowania rowiązania
+- **hMailServer** - serwer IMAP do testowania autentyfikacji bez SSL
+- **poczta interia.pl** - do testowania autentyfikacji z SSL
+- **Overleaf** - tworzenie dokumentacji
