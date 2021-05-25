@@ -5,4 +5,5 @@ Redmine::Plugin.register :imap_user_auth do
   version '0.0.1'
   url 'https://github.com/sswiatloch/redmine-IMAP-user-auth'
   author_url 'https://github.com/sswiatloch/redmine-IMAP-user-auth'
+  settings default: {'host' => 'localhost', 'port' => 143, 'name' => 'IMAP'}, partial: 'settings/imap_settings'
 end
