@@ -31,6 +31,23 @@
                            value="<%= settings['name'] %>" 
                            name="settings[name]" >
       </td>
+    </tr><tr>
+      <th>On the fly register:</th>
+      <td>
+        <%= check_box_tag "settings[otfr]", true, @settings[:otfr] %>
+      </td>
+    </tr>
+    <tr>
+      <th>Use SSL:</th>
+      <td>
+        <%= check_box_tag "settings[ssl]", true, @settings[:ssl] %>
+      </td>
+    </tr>
+    <tr>
+      <th>Bypass SSL:</th>
+      <td>
+        <%= check_box_tag "settings[bypass]", true, @settings[:bypass] %>
+      </td>
     </tr>
   </tbody>
 </table>
