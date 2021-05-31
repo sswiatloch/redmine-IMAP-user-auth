@@ -10,7 +10,7 @@ Celem projektu jest dodanie możliwości uwierzytelniania w **Redmine** za pomoc
 1. Frontend (konfiguracja wtyczki w panelu administratora)
     - Checkbox: **SSL** włączający lub wyłączający szyfrowanie przy łączeniu z serwerem poczty
     - Checkbox: **Rejestracja w locie** pozwalający na logowanie i rejestrację za pomocą loginu i hasła IMAP, bez konieczności wcześniejszej rejestracji w Redmine
-    - Pola tekstowe: **Host** i **Port** gdzie konieczne jest podanie danych serwera IMAP
+    - Pola tekstowe: **Host**, **Port** i **Suffix e-mail** gdzie konieczne jest podanie danych serwera IMAP
     - Pole tekstowe: **Nazwa metody uwierzytelniania** pozwalająca nazwać ten sposób uwierzytelniania (nazwa będzie wyświetlana w panelu administratora w zakładce każdego użytkownika)
     - Przycisk wywołujący zapytanie dodające uwierzytelnianie przez IMAP ustawione zgodnie z konfiguracją do bazy danych
     
