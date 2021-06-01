@@ -1,10 +1,14 @@
+<h2>ImapuserauthController#index</h2>
+
+<%= form_tag( { controller: 'imapuserauth', action: 'updateDatabase' }) do %>
+<div>
 <table>
   <tbody>
     <tr>
       <th>IMAP Host Address</th>
       <td>
         <input type="text" id="settings_host" 
-                           value="<%= settings['host'] %>" 
+                           value="<%= @settings['host'] %>" 
                            name="settings[host]" >
       </td>
     </tr>
@@ -12,7 +16,7 @@
       <th>IMAP Host Port</th>
       <td>
         <input type="text" id="settings_port" 
-                           value="<%= settings['port'] %>" 
+                           value="<%= @settings['port'] %>" 
                            name="settings[port]" >
       </td>
     </tr>
@@ -20,7 +24,7 @@
       <th>IMAP E-mail Suffix</th>
       <td>
         <input type="text" id="settings_suffix" 
-                           value="<%= settings['suffix'] %>" 
+                           value="<%= @settings['suffix'] %>" 
                            name="settings[suffix]" >
       </td>
     </tr>
@@ -28,7 +32,7 @@
       <th>Authentication Source Name</th>
       <td>
         <input type="text" id="settings_name" 
-                           value="<%= settings['name'] %>" 
+                           value="<%= @settings['name'] %>" 
                            name="settings[name]" >
       </td>
     </tr><tr>
@@ -49,12 +53,8 @@
         <%= check_box_tag "settings[bypass]", true, @settings[:bypass] %>
       </td>
     </tr>
-    <%# doesn't work %>
-    <tr>
-      <th>Save settings:</th>
-      <td>
-        <input class="imapuserauth_controller" id="my_id" value="ImapuserauthController.updateDatabase" type="submit" />
-      </td>
-    </tr>
   </tbody>
 </table>
+</div>
+<%= submit_tag l(:button_apply) %>
+<% end %>

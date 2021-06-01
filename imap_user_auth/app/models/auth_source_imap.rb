@@ -56,7 +56,7 @@ class AuthSourceIMAP < AuthSource
         # Authenticate
         options = {
                 :port => self.port,
-                :ssl => self.tls ? true : {:verify_mode => OpenSSL::SSL::VERIFY_NONE}
+                :ssl => self.tls ? (Setting.plugin_imap_user_auth['bypass'] ? {:verify_mode => OpenSSL::SSL::VERIFY_NONE} : true ) : false
                 #  {
                 #   #add this to bypass OpenSSL::SSL::SSLError 
                 #   #(hostname does not match the server certificate) error.
