@@ -52,6 +52,9 @@ Celem projektu jest dodanie możliwości uwierzytelniania w **Redmine** za pomoc
 - Nieprzekraczalny termin dostarczenia aplikacji: **16 czerwca 2021**
 
 
+## Diagram UML
+![Diagram](https://raw.githubusercontent.com/sswiatloch/redmine-IMAP-user-auth/main/doc/component_diagram.png)
+
 ## Opis instalacji
 Kod udostępniony zostanie jako plugin i instalowany będzie w standardowy sposób, to znaczy przez przeniesienie folderu wtyczki do  **`redmine/plugins`**.
 
