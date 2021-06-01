@@ -1,6 +1,7 @@
 <h2>ImapuserauthController#index</h2>
 
-<%#put it inside a form, that uses ImapuserauthController#updateDatabase%>
+<%= form_tag( { controller: 'imapuserauth', action: 'updateDatabase' }) do %>
+<div>
 <table>
   <tbody>
     <tr>
@@ -52,12 +53,8 @@
         <%= check_box_tag "settings[bypass]", true, @settings[:bypass] %>
       </td>
     </tr>
-    <%# doesn't work %>
-    <tr>
-      <th>Save settings:</th>
-      <td>
-        <input class="imapuserauth_controller" id="my_id" value="ImapuserauthController.updateDatabase" type="submit" />
-      </td>
-    </tr>
   </tbody>
 </table>
+</div>
+<%= submit_tag l(:button_apply) %>
+<% end %>
