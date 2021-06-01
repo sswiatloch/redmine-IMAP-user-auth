@@ -1,10 +1,13 @@
+<h2>ImapuserauthController#index</h2>
+
+<%#put it inside a form, that uses ImapuserauthController#updateDatabase%>
 <table>
   <tbody>
     <tr>
       <th>IMAP Host Address</th>
       <td>
         <input type="text" id="settings_host" 
-                           value="<%= settings['host'] %>" 
+                           value="<%= @settings['host'] %>" 
                            name="settings[host]" >
       </td>
     </tr>
@@ -12,7 +15,7 @@
       <th>IMAP Host Port</th>
       <td>
         <input type="text" id="settings_port" 
-                           value="<%= settings['port'] %>" 
+                           value="<%= @settings['port'] %>" 
                            name="settings[port]" >
       </td>
     </tr>
@@ -20,7 +23,7 @@
       <th>IMAP E-mail Suffix</th>
       <td>
         <input type="text" id="settings_suffix" 
-                           value="<%= settings['suffix'] %>" 
+                           value="<%= @settings['suffix'] %>" 
                            name="settings[suffix]" >
       </td>
     </tr>
@@ -28,7 +31,7 @@
       <th>Authentication Source Name</th>
       <td>
         <input type="text" id="settings_name" 
-                           value="<%= settings['name'] %>" 
+                           value="<%= @settings['name'] %>" 
                            name="settings[name]" >
       </td>
     </tr><tr>
