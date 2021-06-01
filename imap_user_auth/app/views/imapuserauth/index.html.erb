@@ -1,7 +1,7 @@
-<h2>ImapuserauthController#index</h2>
+<h2>IMAP user authentication configuration</h2>
 
-<%= form_tag( { controller: 'imapuserauth', action: 'updateDatabase' }) do %>
 <div>
+<%= form_tag( { controller: 'imapuserauth', action: 'updateDatabase' }) do %>
 <table>
   <tbody>
     <tr>
@@ -53,8 +53,14 @@
         <%= check_box_tag "settings[bypass]", true, @settings[:bypass] %>
       </td>
     </tr>
+    <tr>
+      <td>
+        <%= submit_tag l(:button_apply) %>
+      </td>
+    </tr>
   </tbody>
 </table>
-</div>
-<%= submit_tag l(:button_apply) %>
 <% end %>
+</div>
+
+<a href="javascript:history.back()">Back</a>
