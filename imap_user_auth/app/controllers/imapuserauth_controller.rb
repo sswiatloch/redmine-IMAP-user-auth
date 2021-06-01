@@ -1,10 +1,12 @@
 class ImapuserauthController < ApplicationController
+  layout 'admin'
+
+  before_action :require_admin
 
   def index
     @settings = Setting.plugin_imap_user_auth
   end
 
-  # TODO
   def updateDatabase
     setting = params[:settings] ? params[:settings].permit!.to_h : {}
     Setting.send "plugin_imap_user_auth=", setting
@@ -19,5 +21,6 @@ class ImapuserauthController < ApplicationController
     imap.save
 
     flash[:notice] = l(:notice_successful_update)
+
   end
 end
