@@ -1,3 +1,13 @@
 # English strings go here for Rails i18n
 en:
-  # my_label: "My label"
+  host: "IMAP Host Address"
+  port: "IMAP Host Port"
+  suffix: "IMAP E-mail Suffix"
+  auth_source_name: "Authentication Source Name"
+  auth_plugin_name: "IMAP Authentication"
+  onthefly_register: "On the fly register:"
+  use_ssl: "Use SSL:"
+  bypass_ssl: "Bypass SSL:"
+  plugin_configuration_header: "IMAP user authentication configuration"
+  plugin_update_header: "IMAP user authentication - successful update"
+  go_back: "Back"

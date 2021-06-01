@@ -1,11 +1,11 @@
-<h2>IMAP user authentication configuration</h2>
+<h2><%= l(:plugin_configuration_header) %></h2>
 
 <div>
 <%= form_tag( { controller: 'imapuserauth', action: 'updateDatabase' }) do %>
 <table>
   <tbody>
     <tr>
-      <th>IMAP Host Address</th>
+      <th><%= l(:host) %></th>
       <td>
         <input type="text" id="settings_host" 
                            value="<%= @settings['host'] %>" 
@@ -13,7 +13,7 @@
       </td>
     </tr>
     <tr>
-      <th>IMAP Host Port</th>
+      <th><%= l(:port) %></th>
       <td>
         <input type="text" id="settings_port" 
                            value="<%= @settings['port'] %>" 
@@ -21,7 +21,7 @@
       </td>
     </tr>
     <tr>
-      <th>IMAP E-mail Suffix</th>
+      <th><%= l(:suffix) %></th>
       <td>
         <input type="text" id="settings_suffix" 
                            value="<%= @settings['suffix'] %>" 
@@ -29,26 +29,26 @@
       </td>
     </tr>
     <tr>
-      <th>Authentication Source Name</th>
+      <th><%= l(:auth_source_name) %></th>
       <td>
         <input type="text" id="settings_name" 
                            value="<%= @settings['name'] %>" 
                            name="settings[name]" >
       </td>
     </tr><tr>
-      <th>On the fly register:</th>
+      <th><%= l(:onthefly_register) %></th>
       <td>
         <%= check_box_tag "settings[otfr]", true, @settings[:otfr] %>
       </td>
     </tr>
     <tr>
-      <th>Use SSL:</th>
+      <th><%= l(:use_ssl) %></th>
       <td>
         <%= check_box_tag "settings[ssl]", true, @settings[:ssl] %>
       </td>
     </tr>
     <tr>
-      <th>Bypass SSL:</th>
+      <th><%= l(:bypass_ssl) %></th>
       <td>
         <%= check_box_tag "settings[bypass]", true, @settings[:bypass] %>
       </td>
@@ -63,4 +63,4 @@
 <% end %>
 </div>
 
-<a href="javascript:history.back()">Back</a>
+<a href="javascript:history.back()"><%= l(:go_back) %></a>
