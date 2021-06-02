@@ -52,6 +52,9 @@ Celem projektu jest dodanie możliwości uwierzytelniania w **Redmine** za pomoc
 - Poprawne funkcjonowanie z **hMailServer** (No-SSL)
 - Nieprzekraczalny termin dostarczenia aplikacji: **16 czerwca 2021**
 
+### Status wymagań
+Wszystkie wymagania zostały spełnione.
+
 
 ## Diagram UML
 ![Diagram](https://raw.githubusercontent.com/sswiatloch/redmine-IMAP-user-auth/main/doc/component_diagram.png)
@@ -86,3 +89,6 @@ W przypadku ustawienia opcji rejestracji w locie, użytkownik niezarejstrowany w
 - **hMailServer** - serwer IMAP do testowania autentyfikacji bez SSL
 - **poczta interia.pl** - do testowania autentyfikacji z SSL
 - **Overleaf** - tworzenie dokumentacji
+
+## Zakres odpowiedzialności
+Widoczny w zakładce [Issues](https://github.com/sswiatloch/redmine-IMAP-user-auth/issues?q=is%3Aissue+is%3Aclosed).
