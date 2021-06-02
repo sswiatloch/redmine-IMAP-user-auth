@@ -20,7 +20,6 @@ require 'timeout'
 
 class AuthSourceIMAP < AuthSource
     def authenticate(login, password)
-        puts "[DEBUG] 5.1"
 
         suffix = self.attr_mail
         login += suffix
@@ -38,16 +37,11 @@ class AuthSourceIMAP < AuthSource
         }
 		
         begin
-            puts "[DEBUG] 5.2"
             imap = Net::IMAP.new(self.host, options)
             imap.login(login, password)
         rescue Net::IMAP::NoResponseError => e
-            puts "[DEBUG] 5.3"
             retVal = nil
         end
-
-        
-        puts "[DEBUG] 5.4"
         
         return retVal
     end
