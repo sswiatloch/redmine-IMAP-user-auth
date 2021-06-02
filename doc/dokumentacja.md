@@ -70,7 +70,7 @@ Konfiguracja wtyczki jest dostępna w panelu administratora w menu **Imap Authen
 
 Aby zmienić sposób uwierzytelniania wybranego użytkwonika, należy przejść do menu **Users**, wybrać go z listy i zmienić wartość pola **Authentication mode** na nazwę wybraną podczas konfiguracji. Tak samo ustawia się metodę autentyfikacji podczas tworzenia nowego użytkownika. Ważne, aby login użytkownika był taki sam jak login na serwerze IMAP. Po tej zmianie użytkownik powinien używać swojego hasła do konta na serwerze IMAP.
 
-Z perspektywy użytkownika nie można uzyskać dostępu do wcześniejszych konfiguracji.
+Z perspektywy zwykłego użytkownika nie można uzyskać dostępu do widoku konfiguracji wtyczki, możliwość taką ma tylko administrator.
 
 W przypadku ustawienia opcji rejestracji w locie, użytkownik niezarejstrowany w systemie Redmine, po udanej autentyfikacji z serwerem IMAP, zostanie poproszony o wypełnienie formularza tworzącego nowego użytkownika.
 
