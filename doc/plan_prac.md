@@ -21,4 +21,4 @@
       * wykorzystywane narzędzia
     * ***Efekt: [całość dokumentacji](dokumentacja.md) dostępna w pliku MD na Github***
 4) **Implementacja** <s>(do 26.05.2021r.)</s> (do 16.06.2021r.)
-    * ***Efekt: działający plugin dostępny na Github***
+    * ***Efekt: [działający plugin](https://github.com/sswiatloch/redmine-IMAP-user-auth) dostępny na Github***
