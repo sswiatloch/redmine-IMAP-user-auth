@@ -8,10 +8,11 @@ Celem projektu jest dodanie możliwości uwierzytelniania w **Redmine** za pomoc
 
 ## Opis funkcjonalności
 1. Frontend (konfiguracja wtyczki w panelu administratora)
-    - Checkbox: **SSL** włączający lub wyłączający szyfrowanie przy łączeniu z serwerem poczty
-    - Checkbox: **Rejestracja w locie** pozwalający na logowanie i rejestrację za pomocą loginu i hasła IMAP, bez konieczności wcześniejszej rejestracji w Redmine
     - Pola tekstowe: **Host**, **Port** i **Suffix e-mail** gdzie konieczne jest podanie danych serwera IMAP
     - Pole tekstowe: **Nazwa metody uwierzytelniania** pozwalająca nazwać ten sposób uwierzytelniania (nazwa będzie wyświetlana w panelu administratora w zakładce każdego użytkownika)
+    - Checkbox: **Rejestracja w locie** pozwalający na logowanie i rejestrację za pomocą loginu i hasła IMAP, bez konieczności wcześniejszej rejestracji w Redmine
+    - Checkbox: **Używaj SSL** włączający lub wyłączający szyfrowanie przy łączeniu z serwerem poczty
+    - Checkbox: **Bypass SSL** ustawia odpowienie opcje podczas zapytania do serwera IMAP, rozwiązując wystąpienie błędu `OpenSSL::SSL::SSLError (hostname does not match the server certificate)`
     - Przycisk wywołujący zapytanie dodające uwierzytelnianie przez IMAP ustawione zgodnie z konfiguracją do bazy danych
     
 2. Backend
@@ -60,12 +61,18 @@ Kod udostępniony zostanie jako plugin i instalowany będzie w standardowy spos�
 
 Następnie należy wykonać restart **Redmine**. W tym momencie wtyczka powinna pojawić się w panelu administatora. 
 
-Następnie konieczne jest utworzenie wpisu w tabeli **`auth_sources`** bazy danych. Należy to zrobić za pomocą przycisku w formularzu konfiguracji wtyczki w panelu administratora. Należy także zmienić domyślną konfigurację na odpowiadającą żądanemu serwerowi **IMAP**.
+Następnie konieczne jest utworzenie konfiguracji odpowiedniego serwera **IMAP** w menu **Imap Authentication** w panelu Administratora.
 
-Ponowny restart **Redmine**.
+Od teraz uwierzytelnianie **IMAP** jest dostępne.
 
-Od teraz sposób uwierzytelniania każdego użytkownika może zostać zmieniony na **IMAP**.
+## Opis użytkowania
+Konfiguracja wtyczki jest dostępna w panelu administratora w menu **Imap Authentication**. Opis i znaczenie pól można znaleźć w [opisie funkcjonalności](https://github.com/sswiatloch/redmine-IMAP-user-auth/blob/main/doc/dokumentacja.md#Opis-funkcjonalności). Pole **Bypass SSL** zaleca sie, aby było odznaczone, chyba że wystąpi opisany wcześniej błąd. W celu zapisania zmian, należy nacisnąć przycisk **Apply**.
 
+Aby zmienić sposób uwierzytelniania wybranego użytkwonika, należy przejść do menu **Users**, wybrać go z listy i zmienić wartość pola **Authentication mode** na nazwę wybraną podczas konfiguracji. Tak samo ustawia się metodę autentyfikacji podczas tworzenia nowego użytkownika. Ważne, aby login użytkownika był taki sam jak login na serwerze IMAP. Po tej zmianie użytkownik powinien używać swojego hasła do konta na serwerze IMAP.
+
+Z perspektywy użytkownika nie można uzyskać dostępu do wcześniejszych konfiguracji.
+
+W przypadku ustawienia opcji rejestracji w locie, użytkownik niezarejstrowany w systemie Redmine, po udanej autentyfikacji z serwerem IMAP, zostanie poproszony o wypełnienie formularza tworzącego nowego użytkownika.
 
 ## Analiza ryzyk
 
